@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Autocomplete from "./Autocomplete";
 
 function App() {
+  const suggestions = [
+    "Javascript",
+    "react",
+    "NodeJs",
+    "ExpressJs",
+    "Firebase",
+    "MongoDB",
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Autocomplete Demo</h1>
+      <h2>Start typing and experience React autocomplete!</h2>
+      <Autocomplete suggestions={suggestions} />
     </div>
   );
 }
